@@ -24,7 +24,26 @@ module.exports = function(grunt) {
 
     // Before generating any new files, remove any previously-created files.
     clean: {
-      tests: ['tmp']
+      tests: ['tmp'],
+      release: ['.release']
+    },
+
+    copy: {
+      docs: {
+        expand: true,
+        cwd: '',
+        src: [
+          'README.md',
+          'package.json'
+        ],
+        dest: '.release'
+      },
+      tasks: {
+        expand: true,
+        cwd: 'tasks',
+        src: 'csslint.js',
+        dest: '.release/tasks'
+      }
     },
 
     // Configuration to be run
@@ -83,6 +102,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-internal');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-nodeunit');
+  grunt.loadNpmTasks('grunt-contrib-copy');
 
   // Whenever the "test" task is run, first clean the "report" dir then run this
   // plugin's task(s), manually check the output, then run `grunt csslint:all` and `grunt csslint:custom` to look at lint errors
@@ -91,4 +111,5 @@ module.exports = function(grunt) {
   // By default, lint and run all tests.
   grunt.registerTask('default', ['test', 'build-contrib']);
 
+  grunt.registerTask('release', ['jshint', 'clean:release', 'copy:docs', 'copy:tasks']);
 };

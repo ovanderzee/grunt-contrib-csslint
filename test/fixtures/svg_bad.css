@@ -1,0 +1,67 @@
+.clipped {
+	clip: ellipse(40% 40%);
+	clip-path: stroke-box ellipse(40% 40%) 40% ;
+	clip-path: x-box;
+	clip-path: foo;
+	clip-path: invert(40% 40%);
+	clip-path: 40%;
+	clip-path: 0.4;
+	clip-rule: margin-box;
+}
+
+body {
+	font: italic small-caps 300 bold 1.3em/10% Genova, "Comic Sans MS", fantasy;
+	font: 0.9em Nirwana, "Cosmic Sands", cursive bold;
+	font: 2em Itch;Me, sans-serif;
+	font: 1.3em;
+	font: "Dormant", sans-serif;
+	font: monospace;
+}
+
+h2 { font-family: --Futura, sans-serif; }
+h2 { font-family: 47Futura, sans-serif; }
+h2 { font-family: -7Futura, sans-serif; }
+
+p { font-family: Red/Black, sans-serif; }
+p { font-family: "Lucida" Grande, sans-serif; }
+p { font-family: Ahem!, sans-serif; }
+p { font-family: test@foo, sans-serif; }
+p { font-family: #POUND, sans-serif; }
+p { font-family: Hawaii 5-0, sans-serif; }
+
+img {
+  filter: myFunction('#myFilter');
+}
+
+polygon {
+    fill: url('myGradient') icc-color(myCmykDarkRed);
+    fill: currentColor icc-color(myCmykDarkRed);
+
+    fill: icc-color(myCmykDarkRed) darkred;
+    fill: icc-color(myCmykDarkRed);
+    fill: icc-color(myCmykDarkRed) inherit;
+
+    fill: inherit icc-color(myCmykDarkRed);
+    fill: none inherit;
+}
+
+path {
+    stroke: bold;
+    stroke-dasharray: -20px, 10px;
+    stroke-dasharray: 20px auto;
+}
+
+text {
+	glyph-orientation-horizontal: 50rad;
+	glyph-orientation-horizontal: 50rad;
+	glyph-orientation-horizontal: auto;
+}
+
+div {
+	text-decoration: none underline;
+	text-decoration: line-through none;
+	text-decoration: inherit blink;
+	text-decoration: overline inherit;
+	text-decoration: foo;
+}
+

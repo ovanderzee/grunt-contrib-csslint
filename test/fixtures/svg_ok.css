@@ -1,0 +1,81 @@
+.clipped {
+	clip-path: url('#myPath');
+	clip-path: ellipse(40% 40%);
+	clip-path: margin-box;
+	clip-path: ellipse(40% 40%) content-box;
+	clip-path: stroke-box ellipse(40% 40%);
+	clip-path: none;
+}
+
+body {
+	font: italic small-caps 300 1.3em/10% Genova, "Cosmic Sands", sans-serif;
+	font: 1.3em Shorties, sans-serif;
+	font: caption;
+	font: inherit;
+}
+
+h1 { font-family: "New Century Schoolbook", serif }
+h2 { font-family: '21st Century', fantasy }
+p { font-family: "Red/Black", sans-serif; }
+p { font-family: 'Lucida", Grande', sans-serif; }
+p { font-family: "Ahem!", sans-serif; }
+p { font-family: 'test@foo', sans-serif; }
+p { font-family: "#POUND", sans-serif; }
+p { font-family: "Hawaii 5-0", sans-serif; }
+p { font-family: Red\/Black, sans-serif; }
+p { font-family: "Lucida\" Grande", sans-serif; }
+p { font-family: Ahem\!, sans-serif; }
+p { font-family: test\@foo, sans-serif; }
+/*p { font-family: \#POUND, sans-serif; }*/
+p { font-family: Hawaii\ 5\-0, sans-serif; }
+
+
+img {
+  filter: custom( url( dah('x')) dah(('x') ) );
+  filter: custom(url(vertexshader.vert) mix(url(fragment.frag) normal source-atop), 4 5, time 0);
+  filter: blur(30px 30px);
+  filter: url('#myFilter');
+  filter: hue-rotate(10deg);
+  filter: brightness(0.3) contrast(30);
+}
+
+polygon {
+    fill: url('myGradient');
+    fill: url('myGradient') inherit;
+    fill: url('myGradient') darkred;
+    fill: url('myGradient') darkred icc-color(myCmykDarkRed);
+    fill: currentColor;
+    fill: darkred icc-color(myCmykDarkRed);
+    fill: none;
+    fill: inherit;
+}
+
+path {
+    stroke: red;
+    stroke-dasharray: inherit;
+    stroke-dasharray: none;
+    stroke-dasharray: 0;
+    stroke-dasharray: 20px;
+    stroke-dasharray: 4;
+    stroke-dasharray: 20px 40px;
+    stroke-dasharray: 20px, 40px;
+    stroke-width: 30px;
+}
+
+img {
+  crop: rect(10px,20px,30px,40px);
+}
+
+text {
+	glyph-orientation-horizontal: 100deg;
+	glyph-orientation-horizontal: 1.7deg;
+	glyph-orientation-horizontal: -432deg;
+	glyph-orientation-horizontal: 1234deg;
+}
+
+div {
+	text-decoration: none;
+	text-decoration: underline;
+	text-decoration: underline overline line-through blink;
+	text-decoration: inherit;
+}

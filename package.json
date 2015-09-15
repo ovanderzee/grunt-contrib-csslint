@@ -1,12 +1,12 @@
 {
-  "name": "grunt-contrib-csslint",
-  "description": "Lint CSS files",
-  "version": "0.5.0",
-  "author": {
-    "name": "Grunt Team",
-    "url": "http://gruntjs.com/"
+  "name": "grunt-contrib-csslint-oz",
+  "description": "Lint CSS files (forked)",
+  "version": "0.5.0-a",
+  "author": "Onno van der Zee",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ovanderzee/grunt-contrib-csslint.git"
   },
-  "repository": "gruntjs/grunt-contrib-csslint",
   "license": "MIT",
   "engines": {
     "node": ">=0.10.0"
@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "chalk": "^1.0.0",
-    "csslint": "^0.10.0",
+    "csslint-oz": "*",
     "lodash": "^3.3.0",
     "strip-json-comments": "^1.0.2"
   },

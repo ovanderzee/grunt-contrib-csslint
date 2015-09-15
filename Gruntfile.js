@@ -28,7 +28,7 @@ module.exports = function(grunt) {
     },
 
     // Configuration to be run
-    csslint: {
+    'csslint-oz': {
       valid: 'test/fixtures/valid.css',
       empty: 'test/fixtures/empty.css',
       warning: 'test/fixtures/warning.css',
@@ -86,7 +86,7 @@ module.exports = function(grunt) {
 
   // Whenever the "test" task is run, first clean the "report" dir then run this
   // plugin's task(s), manually check the output, then run `grunt csslint:all` and `grunt csslint:custom` to look at lint errors
-  grunt.registerTask('test', ['jshint', 'clean', 'csslint', 'nodeunit']);
+  grunt.registerTask('test', ['jshint', 'clean', 'csslint-oz', 'nodeunit']);
 
   // By default, lint and run all tests.
   grunt.registerTask('default', ['test', 'build-contrib']);

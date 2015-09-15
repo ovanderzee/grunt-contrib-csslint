@@ -1,5 +1,5 @@
 /*
- * grunt-contrib-cssmin
+ * grunt-contrib-csslint
  * http://gruntjs.com/
  *
  * Copyright (c) 2015 Tim Branyen, contributors
@@ -9,8 +9,8 @@
 'use strict';
 
 module.exports = function(grunt) {
-  grunt.registerMultiTask('csslint', 'Lint CSS files with csslint', function() {
-    var csslint = require('csslint').CSSLint;
+  grunt.registerMultiTask('csslint-oz', 'Lint CSS files with csslint', function() {
+    var csslint = require('csslint-oz').CSSLint;
     var stripJsonComments = require('strip-json-comments');
     var ruleset = {};
     var verbose = grunt.verbose;
